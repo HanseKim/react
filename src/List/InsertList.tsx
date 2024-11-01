@@ -29,7 +29,6 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
         padding: '10px',
         border: '2px solid',
         borderRadius: '5px',
-        margin: '10px',
         backgroundColor: mode ? 'lightgray' : '#f1f1f1',
       }}
     >
