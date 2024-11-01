@@ -28,8 +28,6 @@ const MyList: FC<MyListProps> = ({ list, removeItem, mode }) => {
     <div
       className="bg-white"
       style={{
-        width: '500px',
-        height: '370px',
         padding: '10px',
         border: '2px solid ',
         borderRadius: '5px',
