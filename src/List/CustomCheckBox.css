@@ -1,0 +1,39 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type='checkbox'] {
+  display: none;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.checkbox.checked {
+  background-color: #000; /* 체크된 상태의 배경색 */
+}
+
+.remove-button {
+  margin-right: 10px; /* 버튼 간격 */
+  padding: 5px 10px; /* 버튼 패딩 */
+  border: none; /* 테두리 제거 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  cursor: pointer; /* 커서 포인터 */
+  background-color: #577594; /* 기본 배경색 */
+  color: white; /* 글자색 */
+  transition: background-color 0.2s; /* 부드러운 전환 효과 */
+}
+
+.remove-button:hover {
+  background-color: #577594; /* 호버 시 배경색 변경 */
+}
