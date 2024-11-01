@@ -23,40 +23,38 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
 
   return (
     <div
-      className={`bg-white flex justify-between w-full max-w-[500px]`} // 수정된 부분
+    className="bg-white flex justify-between w-full max-w-[500px] mx-auto"
+    style={{
+      height: '50px',
+      padding: '10px',
+      border: '2px solid',
+      borderRadius: '5px',
+      backgroundColor: mode ? 'lightgray' : '#f1f1f1',
+    }}
+  >
+    <input
+      type="text"
+      value={inputValue}
+      placeholder="여기 입력하세요"
+      onKeyPress={handleKeyPress}
+      onChange={(e) => setInputValue(e.target.value)}
+      className="flex-grow border-2 border-black rounded mr-2 px-2"
+      style={{ minWidth: '0' }} // 최소 너비 제한 해제
+    />
+    <button
+      className="w-20 rounded" // 화면에 맞춰 조절되는 너비
       style={{
-        height: '50px',
-        padding: '10px',
-        border: '2px solid',
-        borderRadius: '5px',
-        backgroundColor: mode ? 'lightgray' : '#f1f1f1',
+        backgroundColor: mode ? '#808080' : 'lightgray',
+        cursor: 'pointer',
+        transition: 'background-color 0.3s',
       }}
+      onClick={handleAddClick}
+      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = mode ? '#696969' : '#d3d3d3'}
+      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = mode ? '#808080' : 'lightgray'}
     >
-      <input
-        type="text"
-        value={inputValue}
-        placeholder="여기 입력하세요"
-        onKeyPress={handleKeyPress}
-        onChange={(e) => setInputValue(e.target.value)}
-        className="w-full border-2 border-black rounded" // Tailwind CSS 클래스 추가
-        style={{width:"400px" , marginRight:"5px"}}
-      />
-      <button
-        className="flex-end w-16 rounded"
-        style={{
-          width:"100px",
-          backgroundColor: mode ? '#808080' : 'lightgray',
-          cursor: 'pointer',
-          transition: 'background-color 0.3s',
-        }}
-        onClick={handleAddClick}
-        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = mode ? '#696969' : '#d3d3d3'}
-        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = mode ? '#808080' : 'lightgray'}
-      >
-        Insert
-      </button>
-    </div>
-  );
+      Insert
+    </button>
+  </div> );
 };
 
 export default InsertList;
