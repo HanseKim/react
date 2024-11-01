@@ -16,9 +16,8 @@ const List: FC<ListProps> = ({ num, contents, removeItem, isChecked, onCheckboxC
 
   return (
     <li
-      className="flex items-center m-2 p-2 rounded border border-black transition-opacity duration-200" // Tailwind CSS 클래스 추가
+      className="flex items-center m-2 p-2 rounded border border-black transition-opacity duration-200 w-full max-w-[500px] mx-auto"
       style={{
-        width: '450px',
         opacity: isChecked ? 0.5 : 1,
         overflow: 'hidden',
         whiteSpace: 'nowrap',

@@ -26,7 +26,7 @@ const MyList: FC<MyListProps> = ({ list, removeItem, mode }) => {
 
   return (
     <div
-      className={`bg-white flex flex-col p-4 w-full max-w-[500px] mx-auto`} // Tailwind CSS 사용
+      className="bg-white flex flex-col p-4 w-full max-w-[500px] mx-auto"
       style={{
         border: '2px solid',
         borderRadius: '5px',
