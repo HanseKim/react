@@ -55,8 +55,8 @@ const App: React.FC = () => {
     >
       {modal && <Modal closeModal={closeModal} />} {/* 모달을 조건부 렌더링 */}
       <div
-        className="bg-white rounded-lg"
-        style={{ width: '500px', height: '100%', backgroundColor: bgColor }}
+        className="bg-white rounded-lg w-full h-auto"
+        style={{ backgroundColor: bgColor }}
       >
         <Header
           className="flex justify-between rounded-lg"
