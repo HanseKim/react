@@ -13,7 +13,7 @@ export type HeaderProps = TextProps & {
   elseName: string;
   mdColor: string;
   wow: string;
-  Click : () => void;
+  Click: () => void;
   isLoggedIn: boolean;
   onLogout: () => void;
   mode: boolean;
@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = ({
 }) => {
   return (
     <div
-      className={`flex justify-between items-center ${_className}`} // flexbox로 정렬
+      className={`flex justify-between items-center w-full max-w-[500px] mx-auto ${_className}`} // 반응형 설정 추가
       style={{
         height: '50px',
         border: '2px solid black',
@@ -45,7 +45,7 @@ const Header: FC<HeaderProps> = ({
         mdColor={mdColor}
         style="width: '50px'"
       />
-      <p className="font-bold text-3xl text-center p-1" style={{ width: '390px' }}>
+      <p className="font-bold text-3xl text-center p-1 flex-1 text-center">
         To Do List
       </p>
       <Else
