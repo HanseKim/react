@@ -10,22 +10,21 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
 
   const handleAddClick = () => {
     if (inputValue.trim()) {
-      addItem(inputValue); // addItem 호출
-      setInputValue(''); // 입력값 초기화
+      addItem(inputValue);
+      setInputValue('');
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      handleAddClick(); // Enter 키가 눌리면 addItem 호출
+      handleAddClick();
     }
   };
 
   return (
     <div
-      className="bg-white flex justify-between"
+      className={`bg-white flex justify-between w-full max-w-[500px]`} // 수정된 부분
       style={{
-        width: '500px',
         height: '50px',
         padding: '10px',
         border: '2px solid',
@@ -40,11 +39,7 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
         placeholder="여기 입력하세요"
         onKeyPress={handleKeyPress}
         onChange={(e) => setInputValue(e.target.value)}
-        style={{
-          width: '400px',
-          borderRadius: '5px',
-          border: '2px solid black',
-        }}
+        className="w-full border-2 border-black rounded" // Tailwind CSS 클래스 추가
       />
       <button
         className="flex-end w-16 rounded"
@@ -54,8 +49,8 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
           transition: 'background-color 0.3s',
         }}
         onClick={handleAddClick}
-        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = mode ? '#696969' : '#d3d3d3'} // hover 색상 변경
-        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = mode ? '#808080' : 'lightgray'} // 원래 색상으로 돌아감
+        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = mode ? '#696969' : '#d3d3d3'}
+        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = mode ? '#808080' : 'lightgray'}
       >
         Insert
       </button>
