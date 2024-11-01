@@ -39,10 +39,12 @@ const InsertList: FC<InsertListProps> = ({ addItem, mode }) => {
         onKeyPress={handleKeyPress}
         onChange={(e) => setInputValue(e.target.value)}
         className="w-full border-2 border-black rounded" // Tailwind CSS 클래스 추가
+        style={{width:"400px" , marginRight:"5px"}}
       />
       <button
         className="flex-end w-16 rounded"
         style={{
+          width:"100px",
           backgroundColor: mode ? '#808080' : 'lightgray',
           cursor: 'pointer',
           transition: 'background-color 0.3s',
