@@ -26,17 +26,16 @@ const MyList: FC<MyListProps> = ({ list, removeItem, mode }) => {
 
   return (
     <div
-      className="bg-white"
+      className={`bg-white flex flex-col p-4 w-full max-w-[500px] mx-auto`} // Tailwind CSS 사용
       style={{
-        padding: '10px',
-        border: '2px solid ',
+        border: '2px solid',
         borderRadius: '5px',
-        margin: '10px',
+        margin: '10px auto',
         backgroundColor: mode ? 'lightgray' : '#f1f1f1',
       }}
     >
-      <h1 className="text-xl font-bold">My List</h1>
-      <ul>
+      <h1 className="text-xl font-bold mb-2">My List</h1>
+      <ul className="w-full">
         {list.map((item) => (
           <List
             key={item.num} // key 추가
